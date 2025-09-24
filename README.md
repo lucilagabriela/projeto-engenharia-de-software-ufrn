@@ -18,7 +18,7 @@ Descrição: Como usuário, desejo agendar uma consulta.
     4. ⁠O médico pode visualizar o novo agendamento realizado
 
 ### 3ª história de usuário:
-    Descrição: Como usuário, desejo cancelar uma consulta.
+Descrição: Como usuário, desejo cancelar uma consulta.
 
     1. O usuário com consulta agendada, solicita o cancelamento 
     2. ⁠O usuário informa o motivo e realiza o cancelamento 
