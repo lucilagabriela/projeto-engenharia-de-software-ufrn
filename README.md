@@ -6,8 +6,8 @@ Repositório para armazenar os projetos de software da disciplina DCA3603 - ENGE
 ### 1ª história de usuário:
 Descrição: Como usuário, quero me cadastrar para realizar futuros agendamentos.
 
-    O usuário deve adicionar seus dados pessoais
-    O sistema deve mostrar o cadastro do usuário
+    1. O usuário deve adicionar seus dados pessoais
+    2. O sistema deve mostrar o cadastro do usuário
 
 ### 2ª história de usuário:
 Descrição: Como usuário, desejo agendar uma consulta.
