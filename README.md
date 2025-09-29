@@ -1,5 +1,5 @@
 # projeto-engenharia-de-software-ufrn
-Repositório para armazenar os projetos de software da disciplina DCA3603 - ENGENHARIA DE SOFTWARE, da UFRN.
+Repositório para armazenar os projetos de software da disciplina DCA3603 - ENGENHARIA DE SOFTWARE e DCA3604 - BANCO DE DADOS, da Universidade Federal do Rio Grande do Norte.
 
 ## Integrantes
 * Lucila Gabriela Gomes Costa
