@@ -1,6 +1,17 @@
 # projeto-engenharia-de-software-ufrn
 Repositório para armazenar os projetos de software da disciplina DCA3603 - ENGENHARIA DE SOFTWARE, da UFRN.
 
+## Integrantes
+* Lucila Gabriela Gomes Costa
+* Kaiky Hanry Alencar Fernandes
+* Jundi Taneshi Holanda Tanaka
+
+## Tema
+Sistema de Cadastro Médico Para Clínicas.
+
+## Descrição
+Aplicativo que possibilite o cadastramento de clientes para uma clínica médica, em que é requerido seus dados pessoais e a descrição de sintomas, para que seja facilitado a marcação de exames.
+
 ## User history
 
 ### 1ª história de usuário:
