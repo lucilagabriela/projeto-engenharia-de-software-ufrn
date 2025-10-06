@@ -9,7 +9,7 @@ Médico: representa o profissional de saúde disponível para atendimento, com i
 
 Consulta: representa o vínculo entre o paciente e o médico, contendo informações sobre data, horário, status, sintomas e motivo de cancelamento.
   
-    ![Diagrama de Classes](images/diagrama_classes.jpg)
+  ![Diagrama de Classes](images/diagrama_classes.jpg)
 
 A escolha desse diagrama se justifica por ele permitir visualizar claramente a estrutura de dados e as responsabilidades de cada classe, além de evidenciar as relações 1:N entre usuários, consultas e médicos.
 Isso facilita o entendimento do modelo de domínio e serve de base para o desenvolvimento orientado a objetos do sistema.
@@ -29,7 +29,7 @@ Dependendo do resultado, ele pode confirmar, editar ou cancelar a consulta, info
 
 O processo termina com a finalização do registro ou cancelamento.
 
-    ![Diagrama de Atividades](images/diagrama_atividades.jpg)
+  ![Diagrama de Atividades](images/diagrama_atividades.jpg)
   
 A escolha desse diagrama se justifica por ele representar o comportamento dinâmico do sistema, descrevendo o fluxo de controle e as decisões lógicas que o usuário e o sistema tomam durante a interação.
 Esse tipo de diagrama é fundamental para compreender a sequência de atividades e as possíveis ramificações do processo.
