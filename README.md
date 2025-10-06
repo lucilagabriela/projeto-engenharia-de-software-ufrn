@@ -34,3 +34,12 @@ Descrição: Como usuário, desejo cancelar uma consulta.
     1. O usuário com consulta agendada, solicita o cancelamento.
     2. ⁠O usuário informa o motivo e realiza o cancelamento.
     3. ⁠O sistema deve mostrar novamente o horário como disponível.
+
+## Diagramas
+### 1. Diagrama de Classes
+    O Diagrama de Classes foi elaborado para representar a estrutura estática do sistema de agendamento de consultas médicas, destacando as principais entidades envolvidas e seus relacionamentos.
+
+### 2. Diagrama de Atividades
+    O Diagrama de Atividades foi desenvolvido para representar o fluxo de ações do usuário no processo de login, cadastro e gerenciamento de consultas (confirmação, edição ou cancelamento). Esse tipo de diagrama é fundamental para compreender a sequência de atividades e as possíveis ramificações do processo.
+
+Todos diagramas podem ser visualizados no caminho no diretório "Diagramas".
