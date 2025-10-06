@@ -1,4 +1,4 @@
-### 1. Diagrama de Classes
+## 1. Diagrama de Classes
 O Diagrama de Classes foi elaborado para representar a estrutura estática do sistema de agendamento de consultas médicas, destacando as principais entidades envolvidas e seus relacionamentos.
 
 As classes definidas foram:
@@ -14,7 +14,7 @@ Consulta: representa o vínculo entre o paciente e o médico, contendo informaç
 A escolha desse diagrama se justifica por ele permitir visualizar claramente a estrutura de dados e as responsabilidades de cada classe, além de evidenciar as relações 1:N entre usuários, consultas e médicos.
 Isso facilita o entendimento do modelo de domínio e serve de base para o desenvolvimento orientado a objetos do sistema.
 
-### 2. Diagrama de Atividades
+## 2. Diagrama de Atividades
 O Diagrama de Atividades foi desenvolvido para representar o fluxo de ações do usuário no processo de login, cadastro e gerenciamento de consultas (confirmação, edição ou cancelamento).
 
 O diagrama mostra as etapas:
