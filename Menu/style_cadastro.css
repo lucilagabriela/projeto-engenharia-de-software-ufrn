@@ -1,0 +1,115 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #87e0ff, #66a6ff);
+}
+
+/* ======== CARD PRINCIPAL (MENOR) ======== */
+.container {
+    width: 90%;
+    max-width: 300px; /* card mais estreito */
+    background-color: #d2d2d2;
+    border: 1.5px solid #5a5a5a;
+    border-radius: 10px;
+    padding: 18px 15px; /* padding reduzido */
+    box-shadow: 0 0 12px rgba(0, 0, 0, 0.15);
+}
+
+/* ======== TÍTULO ======== */
+.container h1 {
+    font-size: 24px; /* menor */
+    text-align: center;
+    font-weight: 700;
+    margin-bottom: 15px;
+    color: #111;
+}
+
+/* ======== CAMPOS DE INPUT (MENORES) ======== */
+.input-box {
+    position: relative;
+    width: 100%;
+    margin: 10px 0; /* espaço menor */
+}
+
+.input-box input {
+    width: 100%;
+    height: 40px; /* menor */
+    border-radius: 40px;
+    border: 1.5px solid #555;
+    background-color: #fff;
+    outline: none;
+    font-size: 14px; /* menor */
+    padding: 0 38px 0 16px;
+    transition: 0.3s ease;
+}
+
+.input-box input:focus {
+    border-color: #222;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+}
+
+.input-box i {
+    position: absolute;
+    right: 14px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 18px; /* menor */
+    color: #333;
+}
+
+/* ======== BOTÃO (MENOR) ======== */
+.login {
+    width: 100%;
+    height: 40px; /* reduzido */
+    background-color: #333;
+    color: #fff;
+    border: none;
+    border-radius: 40px;
+    cursor: pointer;
+    font-size: 15px;
+    font-weight: 600;
+    margin-top: 15px;
+    transition: 0.2s ease;
+}
+
+.login:hover {
+    background-color: #111;
+    transform: scale(1.02);
+}
+
+/* ======== LINK PARA LOGIN ======== */
+.register-link {
+    text-align: center;
+    margin-top: 12px; /* menor */
+    font-size: 13px;
+    color: #111;
+}
+
+.register-link a {
+    color: #000;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.register-link a:hover {
+    text-decoration: underline;
+}
+
+/* ======== RESPONSIVIDADE ======== */
+@media (max-width: 400px) {
+    .container {
+        padding: 15px;
+        max-width: 95%;
+    }
+}

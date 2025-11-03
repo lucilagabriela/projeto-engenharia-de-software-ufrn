@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # projeto-engenharia-de-software-ufrn
 Repositório para armazenar os projetos de software da disciplina DCA3603 - ENGENHARIA DE SOFTWARE e DCA3604 - BANCO DE DADOS, da Universidade Federal do Rio Grande do Norte.
 
@@ -46,3 +47,7 @@ Descrição: Como usuário, desejo cancelar uma consulta.
     Esse tipo de diagrama é fundamental para compreender a sequência de atividades e as possíveis ramificações do processo.
 
 Todos diagramas podem ser visualizados no caminho no diretório "Diagramas".
+=======
+# Projeto_agendamento
+Projeto de agendamento de consultas
+>>>>>>> 54a1e07 (MVP App)
