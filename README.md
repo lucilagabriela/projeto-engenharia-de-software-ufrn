@@ -46,3 +46,4 @@ Descrição: Como usuário, desejo cancelar uma consulta.
     Esse tipo de diagrama é fundamental para compreender a sequência de atividades e as possíveis ramificações do processo.
 
 Todos diagramas podem ser visualizados no caminho no diretório "Diagramas".
+=======

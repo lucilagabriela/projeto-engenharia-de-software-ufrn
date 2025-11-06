@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agendar Consulta</title>
+    <link rel="stylesheet" href="style_agendar.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body>
+    <main class="main-container">
+    <section class="form-section">
+        <h1>Agendar Consulta</h1>
+        <form id="form-agendar">
+            <div class="input-box">
+                <select id="especialista">
+                    <option value="">Escolha o tipo de especialista</option>
+                    <option value="Cardiologista">Cardiologista</option>
+                    <option value="Dermatologista">Dermatologista</option>
+                    <option value="Pediatra">Pediatra</option>
+                    <option value="Ortopedista">Ortopedista</option>
+                </select>
+                <i class='bx bxs-user'></i>
+            </div>
+
+            <div class="input-box">
+                <input type="date" id="data">
+                <i class='bx bxs-calendar'></i>
+            </div>
+
+            <div class="input-box">
+                <input type="time" id="hora">
+                <i class='bx bxs-time'></i>
+            </div>
+
+            <div class="input-box">
+                <textarea id="sintomas" placeholder="Descreva seu sintoma (opcional)"></textarea>
+                <i class='bx bxs-message-dots'></i>
+            </div>
+
+            <div class="input-box">
+                <input type="text" id="contato" placeholder="Forma de contato (telefone ou e-mail)">
+                <i class='bx bxs-contact'></i>
+            </div>
+
+            <button type="submit" class="agendar">Agendar</button>
+        </form>
+
+        <a href="login.html" style="display:block; text-align:center; margin-top:15px;">Voltar para o início</a>
+    </section>
+
+    <section class="consultas-container">
+        <h2>Minhas Consultas</h2>
+        <ul id="lista-consultas">
+            <li>Nenhuma consulta agendada.</li>
+        </ul>
+    </section>
+</main>
+
+<script src="agendar.js"></script>
+
+</body>
+</html>

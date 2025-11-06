@@ -1,0 +1,36 @@
+1. Princípio da Responsabilidade Única (SRP)
+
+O Princípio da Responsabilidade Única estabelece que cada módulo ou componente de um sistema deve possuir apenas uma responsabilidade bem definida.
+
+Na aplicação desenvolvida, esse princípio foi aplicado através da separação clara dos arquivos responsáveis por cada parte do sistema.
+Cada página possui seus próprios arquivos HTML, CSS e JavaScript, garantindo que cada um tenha um propósito único e específico.
+
+Por exemplo:
+
+	- O arquivo login.js é responsável exclusivamente pela lógica de autenticação de usuários.
+
+	- O arquivo cadastrar.js trata apenas da funcionalidade de cadastro.
+
+	- Essa organização contribui diretamente para:
+
+	- Melhor legibilidade e manutenção do código;
+
+	- Redução do acoplamento entre componentes;
+
+	- Maior facilidade para atualizar ou corrigir partes específicas do sistema sem impactar outras.
+
+2. Princípio Aberto/Fechado (OCP)
+
+	O Princípio Aberto/Fechado (Open/Closed Principle) define que um sistema deve estar aberto para extensão, mas fechado para modificação. Em nosso projeto, a estrutura do código JavaScript foi desenvolvida de forma a permitir a adição de novas funcionalidades sem a necessidade de alterar o núcleo já existente.
+
+	Por exemplo, novas regras de validação de formulários podem ser facilmente integradas por meio da criação de funções adicionais, sem que seja necessário modificar diretamente a função principal que realiza o envio e o tratamento dos dados.
+
+	Dessa forma, o código permanece estável e seguro, minimizando o risco de introdução de erros e facilitando a evolução do sistema à medida que novas demandas surgirem.
+
+3. Princípio da Inversão de Dependências (DIP)
+
+	O Princípio da Inversão de Dependências propõe que módulos de alto nível não devem depender de módulos de baixo nível, mas ambos devem depender de abstrações. Embora o projeto não utilize classes ou injeção de dependências formalmente, esse princípio foi aplicado na separação entre a lógica de interface e a lógica operacional.
+
+	A lógica JavaScript não depende diretamente dos elementos da interface, mas é acionada por eventos (como submit e click) e processa os dados em funções independentes.
+
+	Essa abordagem permite que partes da interface, como o layout em HTML, possam ser modificadas ou substituídas sem a necessidade de reescrever a lógica central do sistema, promovendo maior flexibilidade e reuso de código.
