@@ -21,7 +21,7 @@ form.addEventListener('submit', (e) => {
     atualizarLista();
     form.reset();
 
-    alert('✅ Consulta agendada com sucesso!');
+    alert('Consulta agendada com sucesso!');
 });
 
 function atualizarLista() {
@@ -36,8 +36,8 @@ function atualizarLista() {
         const li = document.createElement('li');
         li.innerHTML = `
             <strong>${consulta.especialista}</strong><br>
-            📅 ${consulta.data} — 🕒 ${consulta.hora}<br>
-            ${consulta.sintomas ? '💬 ' + consulta.sintomas + '<br>' : ''}
+            ${consulta.data} — ${consulta.hora}<br>
+            ${consulta.sintomas ? '' + consulta.sintomas + '<br>' : ''}
             📞 ${consulta.contato}
             <button class="cancelar" onclick="cancelarConsulta(${index})">
                 <i class='bx bx-x'></i> Cancelar
