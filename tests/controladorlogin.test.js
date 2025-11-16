@@ -2,8 +2,9 @@ const { TextEncoder, TextDecoder } = require("util");
 global.TextEncoder = TextEncoder;
 global.TextDecoder = TextDecoder;
 
+// Importações
 const { JSDOM } = require("jsdom");
-const ControladorLogin = require("../Tarefa_MVP/controladorlogin.js");
+const ControladorLogin = require("../Menu/controladorlogin.js");
 
 describe("Testes da classe ControladorLogin", () => {
     let dom;
