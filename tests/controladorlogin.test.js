@@ -3,7 +3,7 @@ global.TextEncoder = TextEncoder;
 global.TextDecoder = TextDecoder;
 
 const { JSDOM } = require("jsdom");
-const ControladorLogin = require("../Menu/controladorlogin.js");
+const ControladorLogin = require("../Tarefa_MVP/controladorlogin.js");
 
 describe("Testes da classe ControladorLogin", () => {
     let dom;
