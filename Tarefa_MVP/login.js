@@ -1,23 +1,34 @@
-document.addEventListener("DOMContentLoaded", function () {
-
-    const form = document.querySelector("form");
-
-    form.addEventListener("submit", function(event) {
-        event.preventDefault();
-
-        const usuario = document.querySelector("input[type='email']").value.trim();
-        const senha = document.querySelector("input[type='password']").value.trim();
-
-        // Verificar se os campos estão preenchidos
-        if (usuario === "" || senha === "") {
-            alert("Por favor, preencha todos os campos.");
-            return;
+class ControladorLogin {
+    constructor(seletorFormulario) {
+        this.formulario = document.querySelector(seletorFormulario);
+        if (this.formulario) {
+            this.iniciar();
         }
+    }
 
-        // Aqui você poderia validar o usuário e senha
-        // Por enquanto, só redireciona
-        alert("Login aceito!");
-        window.location.href = "agendar.html";
-    });
+    iniciar() {
+        this.formulario.addEventListener("submit", (evento) => {
+            evento.preventDefault();
+            const email = document.querySelector("input[type='email']").value.trim();
+            const senha = document.querySelector("input[type='password']").value.trim();
 
-});
+            const resultadoValidacao = this.validarCampos(email, senha);
+            if (!resultadoValidacao.ok) {
+                alert(resultadoValidacao.mensagem);
+                return;
+            }
+
+            alert("Login aceito!");
+            window.location.href = "agendar.html";
+        });
+    }
+
+    validarCampos(email, senha) {
+        if (!email || !senha) {
+            return { ok: false, mensagem: "Por favor, preencha todos os campos." };
+        }
+        return { ok: true, mensagem: "OK" };
+    }
+}
+
+module.exports = ControladorLogin;
