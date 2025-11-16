@@ -15,41 +15,38 @@ body {
     background: linear-gradient(135deg, #87e0ff, #66a6ff);
 }
 
-/* ======== CARD PRINCIPAL (MENOR) ======== */
 .container {
     width: 90%;
-    max-width: 300px; /* card mais estreito */
+    max-width: 300px; 
     background-color: #d2d2d2;
     border: 1.5px solid #5a5a5a;
     border-radius: 10px;
-    padding: 18px 15px; /* padding reduzido */
+    padding: 18px 15px; 
     box-shadow: 0 0 12px rgba(0, 0, 0, 0.15);
 }
 
-/* ======== TÍTULO ======== */
 .container h1 {
-    font-size: 24px; /* menor */
+    font-size: 24px; 
     text-align: center;
     font-weight: 700;
     margin-bottom: 15px;
     color: #111;
 }
 
-/* ======== CAMPOS DE INPUT (MENORES) ======== */
 .input-box {
     position: relative;
     width: 100%;
-    margin: 10px 0; /* espaço menor */
+    margin: 10px 0; 
 }
 
 .input-box input {
     width: 100%;
-    height: 40px; /* menor */
+    height: 40px; 
     border-radius: 40px;
     border: 1.5px solid #555;
     background-color: #fff;
     outline: none;
-    font-size: 14px; /* menor */
+    font-size: 14px; 
     padding: 0 38px 0 16px;
     transition: 0.3s ease;
 }
@@ -64,14 +61,13 @@ body {
     right: 14px;
     top: 50%;
     transform: translateY(-50%);
-    font-size: 18px; /* menor */
+    font-size: 18px; 
     color: #333;
 }
 
-/* ======== BOTÃO (MENOR) ======== */
 .login {
     width: 100%;
-    height: 40px; /* reduzido */
+    height: 40px; 
     background-color: #333;
     color: #fff;
     border: none;
@@ -88,10 +84,9 @@ body {
     transform: scale(1.02);
 }
 
-/* ======== LINK PARA LOGIN ======== */
 .register-link {
     text-align: center;
-    margin-top: 12px; /* menor */
+    margin-top: 12px; 
     font-size: 13px;
     color: #111;
 }
@@ -106,7 +101,6 @@ body {
     text-decoration: underline;
 }
 
-/* ======== RESPONSIVIDADE ======== */
 @media (max-width: 400px) {
     .container {
         padding: 15px;
