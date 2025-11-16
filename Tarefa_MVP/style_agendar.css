@@ -7,7 +7,6 @@
     font-family: "Poppins", sans-serif;
 }
 
-/* ======== LAYOUT GERAL ======== */
 body {
     background: linear-gradient(135deg, #87e0ff, #66a6ff);
     min-height: 100vh;
@@ -25,7 +24,6 @@ body {
     flex-wrap: wrap;
 }
 
-/* ======== FORMULÁRIO ======== */
 .form-section {
     width: 340px;
     background: rgb(210, 210, 210);
@@ -64,7 +62,6 @@ body {
     resize: none;
 }
 
-/* campo de texto (sintoma) com mais altura e espaçamento */
 #sintoma {
     height: 90px;
     border-radius: 15px;
@@ -98,7 +95,6 @@ button.agendar:hover {
     background-color: #3b6ce0;
 }
 
-/* ======== CONSULTAS ======== */
 .consultas-container {
     width: 400px;
     background-color: #d8d8d8;
@@ -128,7 +124,6 @@ button.agendar:hover {
     position: relative;
 }
 
-/* ======== BOTÃO CANCELAR ======== */
 .consulta-item button {
     background-color: #ff6b6b !important;
     color: #fff !important;
@@ -152,7 +147,6 @@ button.agendar:hover {
     transform: scale(1.05);
 }
 
-/* ======== TEXTO NA LISTA ======== */
 .consulta-item strong {
     display: block;
     margin-bottom: 8px;
@@ -165,7 +159,6 @@ button.agendar:hover {
     font-size: 15px;
 }
 
-/* ======== LINK VOLTAR ======== */
 a {
     color: #472d84;
     text-decoration: none;
