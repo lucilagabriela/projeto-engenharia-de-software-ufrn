@@ -1,56 +1,99 @@
-const form = document.getElementById('form-agendar');
-const lista = document.getElementById('lista-consultas');
+class ControladorAgenda {
+    constructor(seletorFormulario, seletorLista) {
+        this.formulario = document.getElementById(seletorFormulario);
+        this.listaConsultas = document.getElementById(seletorLista);
 
-// carregar consultas do localStorage
-let consultas = JSON.parse(localStorage.getItem('consultas')) || [];
-atualizarLista();
+        this.consultas = JSON.parse(localStorage.getItem('consultas')) || [];
+        this.iniciar();
+    }
 
-form.addEventListener('submit', (e) => {
-    e.preventDefault();
+    iniciar() {
+        this.formulario.addEventListener("submit", (evento) => {
+            evento.preventDefault();
+            this.adicionarConsulta();
+        });
 
-    const especialista = document.getElementById('especialista').value;
-    const data = document.getElementById('data').value;
-    const hora = document.getElementById('hora').value;
-    const sintomas = document.getElementById('sintomas').value;
-    const contato = document.getElementById('contato').value;
+        this.atualizarLista();
+    }
 
-    const novaConsulta = { especialista, data, hora, sintomas, contato };
-    consultas.push(novaConsulta);
-    localStorage.setItem('consultas', JSON.stringify(consultas));
+    sanitizar(texto) {
+        return texto.replace(/[<>&"]/g, (c) => ({
+            '<': '&lt;',
+            '>': '&gt;',
+            '&': '&amp;',
+            '"': '&quot;'
+        }[c]));
+    }
 
-    atualizarLista();
-    form.reset();
+    adicionarConsulta() {
+        const novaConsulta = {
+            especialista: document.getElementById('especialista').value,
+            data: document.getElementById('data').value,
+            hora: document.getElementById('hora').value,
+            sintomas: document.getElementById('sintomas').value,
+            contato: document.getElementById('contato').value
+        };
 
-    alert('✅ Consulta agendada com sucesso!');
+        if (!novaConsulta.especialista || !novaConsulta.data || !novaConsulta.hora || !novaConsulta.contato) {
+            alert("Por favor, preencha os campos Obrigatórios.");
+            return;
+        }
+
+        novaConsulta.sintomas = this.sanitizar(novaConsulta.sintomas);
+        novaConsulta.contato = this.sanitizar(novaConsulta.contato);
+
+        this.consultas.push(novaConsulta);
+        this.salvarConsultas();
+        this.atualizarLista();
+        this.formulario.reset();
+
+        alert("Consulta agendada com sucesso!");
+    }
+
+    cancelarConsulta(indice) {
+        this.consultas.splice(indice, 1);
+        this.salvarConsultas();
+        this.atualizarLista();
+    }
+
+    salvarConsultas() {
+        localStorage.setItem('consultas', JSON.stringify(this.consultas));
+    }
+
+    atualizarLista() {
+        this.listaConsultas.innerHTML = "";
+
+        if (this.consultas.length === 0) {
+            this.listaConsultas.innerHTML = '<li class="placeholder">Nenhuma consulta agendada.</li>';
+            return;
+        }
+
+        this.consultas.forEach((consulta, indice) => {
+            const item = document.createElement('li');
+            item.classList.add('consulta-item'); 
+
+            item.innerHTML = `
+                <strong>${consulta.especialista}</strong>
+                <span>${consulta.data} — ${consulta.hora}</span>
+                ${consulta.sintomas ? `<span>${consulta.sintomas}</span>` : ""}
+                <span>${consulta.contato}</span>
+
+                <button class="cancelar" data-indice="${indice}">
+                    <i class='bx bx-x'></i> Cancelar
+                </button>
+            `;
+
+            item.querySelector("button").addEventListener("click", () => {
+                if (confirm("Deseja cancelar esta consulta?")) {
+                    this.cancelarConsulta(indice);
+                }
+            });
+
+            this.listaConsultas.appendChild(item);
+        });
+    }
+}
+
+document.addEventListener("DOMContentLoaded", () => {
+    new ControladorAgenda("form-agendar", "lista-consultas");
 });
-
-function atualizarLista() {
-    lista.innerHTML = '';
-
-    if (consultas.length === 0) {
-        lista.innerHTML = '<li class="placeholder">Nenhuma consulta agendada.</li>';
-        return;
-    }
-
-    consultas.forEach((consulta, index) => {
-        const li = document.createElement('li');
-        li.innerHTML = `
-            <strong>${consulta.especialista}</strong><br>
-            📅 ${consulta.data} — 🕒 ${consulta.hora}<br>
-            ${consulta.sintomas ? '💬 ' + consulta.sintomas + '<br>' : ''}
-            📞 ${consulta.contato}
-            <button class="cancelar" onclick="cancelarConsulta(${index})">
-                <i class='bx bx-x'></i> Cancelar
-            </button>
-        `;
-        lista.appendChild(li);
-    });
-}
-
-function cancelarConsulta(index) {
-    if (confirm('Deseja cancelar esta consulta?')) {
-        consultas.splice(index, 1);
-        localStorage.setItem('consultas', JSON.stringify(consultas));
-        atualizarLista();
-    }
-}
