@@ -1,31 +1,44 @@
-document.addEventListener("DOMContentLoaded", function () {
+class ControladorCadastro {
+    constructor(seletorFormulario) {
+        this.formulario = document.querySelector(seletorFormulario);
+        this.iniciar();
+    }
 
-    const form = document.querySelector("form");
+    iniciar() {
+        this.formulario.addEventListener("submit", (evento) => {
+            evento.preventDefault();
 
-    form.addEventListener("submit", function(event) {
-        event.preventDefault();
+            const campos = [...document.querySelectorAll("input")];
+            const resultadoValidacao = this.validarCadastro(campos);
 
-        const inputs = document.querySelectorAll("input");
-
-        // Verificar campos vazios
-        for (let input of inputs) {
-            if (input.value.trim() === "") {
-                alert("Por favor, preencha todos os campos.");
+            if (!resultadoValidacao.ok) {
+                alert(resultadoValidacao.mensagem);
                 return;
+            }
+
+            alert("Cadastro aceito!");
+            window.location.href = "login.html";
+        });
+    }
+
+    validarCadastro(campos) {
+        for (let campo of campos) {
+            if (campo.value.trim() === "") {
+                return { ok: false, mensagem: "Por favor, preencha todos os campos." };
             }
         }
 
-        // Verificar senhas
-        const senha = inputs[4].value;
-        const confirmarSenha = inputs[5].value;
+        const senha = campos[4].value;
+        const confirmarSenha = campos[5].value;
 
         if (senha !== confirmarSenha) {
-            alert("As senhas não coincidem!");
-            return;
+            return { ok: false, mensagem: "As senhas não coincidem!" };
         }
 
-        // Tudo certo
-        alert("Cadastro aceito!");
-        window.location.href = "login.html";
-    });
+        return { ok: true };
+    }
+}
+
+document.addEventListener("DOMContentLoaded", () => {
+    new ControladorCadastro("form");
 });
