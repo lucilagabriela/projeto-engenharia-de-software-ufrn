@@ -65,7 +65,7 @@ expect(resultado.mensagem).toBe("OK");
 
 ### Resultado dos testes
 
-<img width="753" height="105" alt="Captura de tela 2025-11-17 084201" src="https://github.com/user-attachments/assets/b25cf4dc-949d-4c46-93f6-f040bf2fc426" />
+![WhatsApp Image 2025-11-16 at 18 41 09](https://github.com/user-attachments/assets/9679095b-c904-47e0-9237-2fa0f0c67b40)
 
 Significa que:
 * 35.29% de linhas foram testadas.
