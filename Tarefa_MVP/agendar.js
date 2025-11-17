@@ -55,7 +55,7 @@ class ControladorAgenda {
         this.salvarConsultas();
         this.atualizarLista();
     }
-
+  
     salvarConsultas() {
         localStorage.setItem('consultas', JSON.stringify(this.consultas));
     }
