@@ -55,7 +55,7 @@ class ControladorAgenda {
         this.salvarConsultas();
         this.atualizarLista();
     }
-
+  
     salvarConsultas() {
         localStorage.setItem('consultas', JSON.stringify(this.consultas));
     }
@@ -97,4 +97,3 @@ class ControladorAgenda {
 document.addEventListener("DOMContentLoaded", () => {
     new ControladorAgenda("form-agendar", "lista-consultas");
 });
-

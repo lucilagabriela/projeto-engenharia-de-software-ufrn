@@ -1,0 +1,36 @@
+{
+  "name": "projetos_vs",
+  "version": "1.0.0",
+  "description": "Repositório para armazenar os projetos de software da disciplina DCA3603 - ENGENHARIA DE SOFTWARE e DCA3604 - BANCO DE DADOS, da Universidade Federal do Rio Grande do Norte.",
+  "main": "index.js",
+  "directories": {
+    "test": "tests"
+  },
+  "scripts": {
+    "test": "jest",
+    "coverage": "jest --coverage"
+  },
+  "devDependencies": {
+    "jest": "^29.0.0",
+    "jest-environment-jsdom": "^29.7.0",
+    "jsdom": "^22.1.0"
+  },
+  "jest": {
+  "testEnvironment": "jest-environment-jsdom",
+  "collectCoverage": true,
+  "coverageDirectory": "coverage",
+  "collectCoverageFrom": ["Tarefa_MVP/controladorlogin.js"]
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lucilagabriela/projeto-engenharia-de-software-ufrn.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/lucilagabriela/projeto-engenharia-de-software-ufrn/issues"
+  },
+  "homepage": "https://github.com/lucilagabriela/projeto-engenharia-de-software-ufrn#readme"
+}
