@@ -31,4 +31,4 @@ class ControladorLogin {
     }
 }
 
-module.exports = ControladorLogin;
+export default ControladorLogin;
