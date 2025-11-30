@@ -65,3 +65,39 @@ O diagrama mostra as etapas:
 
 A escolha desse diagrama se justifica por ele representar o comportamento dinâmico do sistema, descrevendo o fluxo de controle e as decisões lógicas que o usuário e o sistema tomam durante a interação.
 Esse tipo de diagrama é fundamental para compreender a sequência de atividades e as possíveis ramificações do processo.
+
+## Princípios de Projeto 
+
+Eles orientam o desenvolvimento de software para alcançar propriedades cruciais de um bom projeto:
+
+1. Integridade Conceitual: O sistema deve ter uma visão unificada e consistente em todas as suas partes (interface e código), facilitando o entendimento e a manutenção.
+
+2. Ocultamento de Informação (Encapsulamento): Classes devem esconder seus detalhes internos, expondo apenas interfaces públicas estáveis. Isso permite que a implementação interna evolua sem afetar os usuários da classe.
+
+3. Coesão: Módulos (classes/métodos) devem ter uma única responsabilidade ou oferecer um serviço bem definido.
+
+4. Acoplamento: O grau de dependência entre classes. O objetivo é buscar um acoplamento "bom" ou "aceitável", onde a dependência ocorre por meio de interfaces estáveis para obter um serviço útil.
+
+Os Princípios de Projeto
+1. Princípio da Responsabilidade Única (SRP): Diretamente ligado à Coesão, estabelece que uma classe deve ter apenas uma razão para mudar.
+
+2. Princípio da Segregação de Interfaces (ISP): Relacionado à Coesão, propõe interfaces pequenas e específicas, evitando que clientes dependam de métodos que não utilizam.
+
+3. Princípio da Inversão de Dependências (DIP): Visa diminuir o Acoplamento, recomendando depender de abstrações (interfaces) em vez de implementações concretas (classes).
+
+4. Princípio Aberto/Fechado (OCP): Uma classe deve ser "aberta para extensão, mas fechada para modificação", permitindo adicionar novas funcionalidades sem alterar o código-fonte existente.
+
+5. Princípio de Demeter (Lei do Menor Conhecimento): Relacionado ao Ocultamento de Informação, sugere evitar longas cadeias de chamadas de métodos, quebrando o encapsulamento.
+
+6. Princípio da Substituição de Liskov (LSP): Estabelece que uma subclasse deve poder substituir sua classe base sem quebrar o programa, mantendo as garantias e comportamentos da classe mãe.
+
+7. Prefira Composição a Herança: A composição (relação "possui", reuso "caixa-preta") é frequentemente mais flexível e robusta que a herança (relação "é-um", reuso "caixa-branca"), promovendo melhor encapsulamento.
+
+Princípios Selecionados para o Projeto:
+1. Princípio da Responsabilidade Única (SRP): É aplicado para evitar classes inespecíficas. Garante que a alteração de uma funcionalidade (ex: agendamento) não gere o risco de quebrar outra (ex: cadastro de usuário), pois elas residem em classes separadas.
+
+2. Princípio da Inversão de Dependências (DIP): É fundamental para criar um sistema desacoplado, flexível e testável. A regra é clara: módulos de alto nível (regra de negócio) devem depender de abstrações (interfaces), e não de módulos de baixo nível (como banco de dados).
+
+3. Princípio Aberto/Fechado (OCP): Garante a extensibilidade do sistema. Permite adicionar novas funcionalidades (ex: incluir "exames laboratoriais" além de "consultas") sem modificar o código que já está funcionando, utilizando, por exemplo, interfaces para isolar as novas regras de validação.
+
+Você pode conferir mais informações [nesse link](https://github.com/lucilagabriela/projeto-engenharia-de-software-ufrn/blob/main/Principios-de-projetos.md).
